@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     # For python 3.8 compat
     nixpkgs-python.url = "github:cachix/nixpkgs-python";
     flake-parts.url = "github:hercules-ci/flake-parts";

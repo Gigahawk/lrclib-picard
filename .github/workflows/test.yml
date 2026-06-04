@@ -5,6 +5,9 @@ on:
 jobs:
   flake-check:
     runs-on: ubuntu-latest
+    env:
+      # Required since qt5.qtwebengine is deprecated
+      NIXPKGS_ALLOW_INSECURE: 1
     steps:
       - uses: actions/checkout@v4
         with:
@@ -19,6 +22,8 @@ jobs:
           primary-key: cache-test-${{ runner.os }}-nix-store-${{ hashFiles('**/*.nix') }}
           restore-prefixes-first-match: cache-test-${{ runner.os }}-nix-store-
       - name: Run tests
-        run: nix flake check
+        run: |
+          nix flake check --impure
       - name: Run pytest
-        run: nix develop --command bash -c "pytest"
+        run: |
+          nix develop --impure --command bash -c "pytest"

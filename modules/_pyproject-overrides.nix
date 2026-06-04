@@ -8,6 +8,13 @@ let
   pkg-name = import ./_package_name.nix { };
 in
 final: prev: {
+  picard = prev.picard.overrideAttrs (old: {
+    buildInputs = (old.buildInputs or [ ]) ++ [
+      prev.setuptools
+      pkgs.gettext
+    ];
+  });
+
   # Example overrides to fix build
   # psycopg2 = prev.psycopg2.overrideAttrs (old: {
   #   buildInputs = (old.buildInputs or [ ]) ++ [
