@@ -11,6 +11,11 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v6
+        with:
+          submodules: true
+      - name: Install deps (Ubuntu)
+        if: runner.os == 'Linux'
+        run: sudo apt install gettext
       - name: Install uv
         uses: astral-sh/setup-uv@v7
       - name: Install the project
