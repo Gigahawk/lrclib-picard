@@ -1,0 +1,3 @@
+from picard.const import PICARD_URLS as PICARD_URLS
+
+def open(url) -> None: ...

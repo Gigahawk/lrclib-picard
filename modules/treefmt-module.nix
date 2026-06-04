@@ -20,8 +20,13 @@
         programs.dos2unix.enable = true;
 
         # python
-        programs.ruff-check.enable = true;
-        programs.ruff-format.enable = true;
+        programs.ruff-check = {
+          enable = true;
+          includes = [ "*.py" ];
+        };
+        programs.ruff-format = {
+          enable = true;
+        };
         programs.mypy = {
           enable = true;
           directories = {
@@ -29,6 +34,7 @@
               options = [
                 "--check-untyped-defs"
                 "--exclude=submodules"
+                "--exclude=stubs"
               ];
               extraPythonPaths = [ siteDir ];
             };

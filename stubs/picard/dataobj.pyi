@@ -1,0 +1,13 @@
+from _typeshed import Incomplete
+from picard.config import get_config as get_config
+from picard.util import LockableObject as LockableObject
+
+class DataObject(LockableObject):
+    id: Incomplete
+    item: Incomplete
+    def __init__(self, obj_id) -> None: ...
+    @property
+    def genres(self): ...
+    def add_genre(self, name, count) -> None: ...
+    @staticmethod
+    def set_genre_inc_params(inc, config: Incomplete | None = None): ...

@@ -3,7 +3,7 @@ requires = ["setuptools<75.3", "wheel<0.44"]
 build-backend = "setuptools.build_meta"
 
 [dependency-groups]
-dev = ["pytest<=8.3.4"]
+dev = ["mypy>=1.14.1", "pytest<=8.3.4"]
 
 [project]
 name = "lrclib-picard"
@@ -12,6 +12,9 @@ description = "LRCLIB plugin for MusicBrainz Picard"
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = ["picard>=2.13.3"]
+
+[tool.ruff]
+extend-exclude = ["stubs", "*.pyi"]
 
 [tool.uv]
 override-dependencies = ["pyqt5-qt5; sys_platform != 'win32'"]
