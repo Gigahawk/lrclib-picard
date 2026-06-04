@@ -22,8 +22,6 @@ jobs:
           cp -r lrclib_py/* temp
           rm lrclib_py
           mv temp lrclib_py
-
-
       - name: Install deps (Ubuntu)
         if: runner.os == 'Linux'
         run: sudo apt install gettext
