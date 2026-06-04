@@ -23,7 +23,7 @@ jobs:
           restore-prefixes-first-match: cache-test-${{ runner.os }}-nix-store-
       - name: Run tests
         run: |
-          nix flake check --impure
+          nix flake check --impure '.?submodules=1'
       - name: Run pytest
         run: |
           nix develop --impure --command bash -c "pytest"
