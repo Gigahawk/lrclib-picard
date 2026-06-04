@@ -249,22 +249,14 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
-    { name = "pyqt-builder" },
     { name = "pytest" },
-    { name = "sip", version = "6.8.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
-    { name = "sip", version = "6.14.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
-    { name = "sip", version = "6.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
 ]
 
 [package.metadata]
 requires-dist = [{ name = "picard", specifier = ">=2.13.3" }]
 
 [package.metadata.requires-dev]
-dev = [
-    { name = "pyqt-builder", specifier = ">=1.19.1" },
-    { name = "pytest", specifier = "<=8.3.4" },
-    { name = "sip", specifier = ">=6.8.6" },
-]
+dev = [{ name = "pytest", specifier = "<=8.3.4" }]
 
 [[package]]
 name = "markdown"
@@ -436,21 +428,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/fc/6b/1167d2e926b29fa79680ba83028818af28ec97a91e84d849ab18a6b51342/pyobjc_framework_Cocoa-10.3.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:7faa448d2038ae0e0287a326d390002e744bb6470e45995e2dbd16c892e4495a", size = 284040, upload-time = "2024-11-30T13:18:57.955Z" },
     { url = "https://files.pythonhosted.org/packages/41/df/b627ac079a11011f7a9e4ae5a3c358fc6540d0b51386d339e214a957a4aa/pyobjc_framework_Cocoa-10.3.2-cp38-cp38-macosx_11_0_universal2.whl", hash = "sha256:fcd53fee2be9708576617994b107aedc2c40824b648cd51e780e8399c0a447b6", size = 381813, upload-time = "2024-11-30T13:18:59.766Z" },
     { url = "https://files.pythonhosted.org/packages/cc/fb/3ed87bcc1db8290cf83aad4cb584c7b489f1aad5500008ba3b43b6fd1a8b/pyobjc_framework_Cocoa-10.3.2-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:838fcf0d10674bde9ff64a3f20c0e188f2dc5e804476d80509b81c4ac1dabc59", size = 381514, upload-time = "2024-11-30T13:19:15.651Z" },
-]
-
-[[package]]
-name = "pyqt-builder"
-version = "1.19.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "packaging" },
-    { name = "sip", version = "6.8.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
-    { name = "sip", version = "6.14.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
-    { name = "sip", version = "6.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/61/f6/f3b504b4d55a7c4d3393cb90378501f1f5fc7f233bd85c0375674f84d2af/pyqt_builder-1.19.1.tar.gz", hash = "sha256:6af6646ba29668751b039bfdced51642cb510e300796b58a4d68b7f956a024d8", size = 5247679, upload-time = "2025-12-05T13:58:43.173Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/13/e8/3cdb96cd8f7f0bf4113532d5d762324dd6ea3630362ea2169f9075803a2e/pyqt_builder-1.19.1-py3-none-any.whl", hash = "sha256:bb8a348479c25db54aa37542fcc98b6c28bb057c9dbac07ddf2424df2084951a", size = 5294524, upload-time = "2025-12-05T13:58:38.33Z" },
 ]
 
 [[package]]
@@ -642,82 +619,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/dd/62/71c27c94f457cf4418ef8ccc71735324c549f7e3ea9d34aba50874563561/pyyaml-6.0.3-cp39-cp39-musllinux_1_2_x86_64.whl", hash = "sha256:27c0abcb4a5dac13684a37f76e701e054692a9b2d3064b70f5e4eb54810553d7", size = 755677, upload-time = "2025-09-25T21:33:09.876Z" },
     { url = "https://files.pythonhosted.org/packages/29/3d/6f5e0d58bd924fb0d06c3a6bad00effbdae2de5adb5cda5648006ffbd8d3/pyyaml-6.0.3-cp39-cp39-win32.whl", hash = "sha256:1ebe39cb5fc479422b83de611d14e2c0d3bb2a18bbcb01f229ab3cfbd8fee7a0", size = 142592, upload-time = "2025-09-25T21:33:10.983Z" },
     { url = "https://files.pythonhosted.org/packages/f0/0c/25113e0b5e103d7f1490c0e947e303fe4a696c10b501dea7a9f49d4e876c/pyyaml-6.0.3-cp39-cp39-win_amd64.whl", hash = "sha256:2e71d11abed7344e42a8849600193d15b6def118602c4c176f748e4583246007", size = 158777, upload-time = "2025-09-25T21:33:15.55Z" },
-]
-
-[[package]]
-name = "setuptools"
-version = "75.3.4"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.9'",
-]
-sdist = { url = "https://files.pythonhosted.org/packages/0e/93/d2622cbf262418995140dfc1ddb890badd6322893fa122302577c82b9617/setuptools-75.3.4.tar.gz", hash = "sha256:b4ea3f76e1633c4d2d422a5d68ab35fd35402ad71e6acaa5d7e5956eb47e8887", size = 1354595, upload-time = "2026-02-08T14:12:34.287Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/cd/b1/961ba076c7d3732e3a97e6681c55ef647afb795fe8bfcd27becec8a762ce/setuptools-75.3.4-py3-none-any.whl", hash = "sha256:2dd50a7f42dddfa1d02a36f275dbe716f38ed250224f609d35fb60a09593d93e", size = 1251633, upload-time = "2026-02-08T14:12:32.364Z" },
-]
-
-[[package]]
-name = "setuptools"
-version = "82.0.1"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.10'",
-    "python_full_version == '3.9.*'",
-]
-sdist = { url = "https://files.pythonhosted.org/packages/4f/db/cfac1baf10650ab4d1c111714410d2fbb77ac5a616db26775db562c8fab2/setuptools-82.0.1.tar.gz", hash = "sha256:7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9", size = 1152316, upload-time = "2026-03-09T12:47:17.221Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/9d/76/f789f7a86709c6b087c5a2f52f911838cad707cc613162401badc665acfe/setuptools-82.0.1-py3-none-any.whl", hash = "sha256:a59e362652f08dcd477c78bb6e7bd9d80a7995bc73ce773050228a348ce2e5bb", size = 1006223, upload-time = "2026-03-09T12:47:15.026Z" },
-]
-
-[[package]]
-name = "sip"
-version = "6.8.6"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.9'",
-]
-dependencies = [
-    { name = "packaging", marker = "python_full_version < '3.9'" },
-    { name = "setuptools", version = "75.3.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
-    { name = "tomli", marker = "python_full_version < '3.9'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/6e/52/36987b182711104d5e9f8831dd989085b1241fc627829c36ddf81640c372/sip-6.8.6.tar.gz", hash = "sha256:7fc959e48e6ec5d5af8bd026f69f5e24d08b3cb8abb342176f5ab8030cc07d7a", size = 420778, upload-time = "2024-07-12T11:26:09.605Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/26/7e/1fbee86c34d21f32fd8a6e3efbe4a796fb506541051280d5c94264343db7/sip-6.8.6-py3-none-any.whl", hash = "sha256:3d715cb29396db8ff5258cfd2082dc24a75ed0821d9c3d53acccdc83a7f2617f", size = 469683, upload-time = "2024-07-12T11:26:06.622Z" },
-]
-
-[[package]]
-name = "sip"
-version = "6.14.0"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version == '3.9.*'",
-]
-dependencies = [
-    { name = "packaging", marker = "python_full_version == '3.9.*'" },
-    { name = "setuptools", version = "82.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
-    { name = "tomli", marker = "python_full_version == '3.9.*'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/a7/8a/869417bc2ea45a29bc6ed4ee82757e472f0c7490cf5b7ddb82b70806bce4/sip-6.14.0.tar.gz", hash = "sha256:20c086aba387707b34cf47fd96d1a978d01e2b95807e86f8aaa960081f163b28", size = 2349267, upload-time = "2025-10-23T15:50:25.396Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/c5/ec/17cfdfcc511b821ef76b06d843140f6a4c19fac18764b6a96b23352b3988/sip-6.14.0-py3-none-any.whl", hash = "sha256:35fe63c3e2862b12656a2c50e622cc471143e7cb8d56ac639eb2990be3352970", size = 2602544, upload-time = "2025-10-23T15:50:22.488Z" },
-]
-
-[[package]]
-name = "sip"
-version = "6.15.3"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.10'",
-]
-dependencies = [
-    { name = "packaging", marker = "python_full_version >= '3.10'" },
-    { name = "setuptools", version = "82.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "tomli", marker = "python_full_version == '3.10.*'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/02/b1/79bff1c49a9e19ffe0211cb8905cc514c3f6b8f3f7ae55a40403d346c076/sip-6.15.3.tar.gz", hash = "sha256:bb2516983f9f716d321e5157c00d0de0c12422eba73b8f43a44610a0f6622438", size = 2590400, upload-time = "2026-03-24T11:56:53.016Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/0f/d9/36c6650bdb152d6089de179ceb94b71a862a0fa4af193fcf6ae09d4e2e19/sip-6.15.3-py3-none-any.whl", hash = "sha256:60df2ee1d17f5375dd15f92ed6181937fea3761e094b73ddfcc550991711e007", size = 2842306, upload-time = "2026-03-24T11:56:49.011Z" },
 ]
 
 [[package]]

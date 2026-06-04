@@ -26,7 +26,10 @@
           enable = true;
           directories = {
             "" = {
-              options = [ "--check-untyped-defs" ];
+              options = [
+                "--check-untyped-defs"
+                "--exclude=submodules"
+              ];
               extraPythonPaths = [ siteDir ];
             };
           };

@@ -1,0 +1,3 @@
+[submodule "submodules/lrclib-py"]
+	path = submodules/lrclib-py
+	url = https://github.com/Gigahawk/lrclib-py.git
