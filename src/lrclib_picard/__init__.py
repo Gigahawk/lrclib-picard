@@ -14,9 +14,13 @@ import sys
 import os
 from typing import Union, List
 
-# HACK: Picard (at least on Windows) seems to be missing some stuff from
+# HACK: lrclib_py depends on dataclasses.
+# Picard (at least on Windows) seems to be missing some stuff from
 # python stdlib
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "vendor"))
+try:
+    import dataclasses  # noqa: F401
+except ImportError:
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "vendor/dataclasses"))
 
 from picard import log
 from picard.ui.itemviews import (
