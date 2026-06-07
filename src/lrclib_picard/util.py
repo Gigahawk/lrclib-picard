@@ -22,3 +22,9 @@ def flatten_to_files(objs: Union[Iterable[_item], _item]) -> List[File]:
                 if track.linked_files:
                     out.extend(track.linked_files)
     return out
+
+
+def set_lyrics(file: File, lyrics: str, tag_names: Iterable[str] = ["lyrics"]):
+    for t in tag_names:
+        file.metadata[t] = lyrics
+    file.save()
